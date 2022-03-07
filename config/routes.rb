@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  namespace :api do
+  # resources :jets would fill out all the crud actions
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get    'jet',         to:'jet#index'
+  get    'jet/:id',     to:'jet#show'
+  post   'jet',         to:'jet#create'
+  put    'jet/:id',     to:'jet#update'
+  delete 'jet/:id',     to:'jet#destroy'
+
+  end
 end
