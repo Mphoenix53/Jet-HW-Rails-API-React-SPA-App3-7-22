@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Jet.destroy_all
+
+Jet.create(name:'F-14', age:52)
+Jet.create(name:'F-15', age:50)
+Jet.create(name:'F-16', age:46)
+Jet.create(name:'F-17', age:19)
+Jet.create(name:'F-18', age:44)
+
+puts "seeded jet size: #{Jet.all.size}"

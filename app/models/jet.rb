@@ -1,0 +1,3 @@
+class Jet < ApplicationRecord
+  
+end
