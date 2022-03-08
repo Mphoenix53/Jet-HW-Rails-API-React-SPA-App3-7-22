@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "./App.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -25,8 +26,8 @@ ReactDOM.render(
           <Route path="/home" element={<Home />} />
           <Route path="/jets" element={<Jets />} />
           <Route path="/jets/new" element={<JetForm />} />
-          <Route path="/jets/new/:id" element={<JetShow />} />
-          <Route path="/jets/new/:id/edit" element={<JetForm />} />
+          <Route path="/jets/:id" element={<JetShow />} />
+          <Route path="/jets/:id/edit" element={<JetForm />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
