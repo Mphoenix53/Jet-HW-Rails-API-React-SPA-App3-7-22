@@ -7,6 +7,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./pages/About";
 import DataProvider from "./providers/DataProvider";
 import Home from "./pages/Home";
+import JetForm from "./pages/JetForm";
+import JetShow from "./pages/JetShow";
+import Jets from "./pages/Jets";
 
 
 const NotFound = ()=>{
@@ -20,6 +23,10 @@ ReactDOM.render(
         <Route path="/" element={<App />}>
           <Route path="/about" element={<About />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/jets" element={<Jets />} />
+          <Route path="/jets/new" element={<JetForm />} />
+          <Route path="/jets/new/:id" element={<JetShow />} />
+          <Route path="/jets/new/:id/edit" element={<JetForm />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
