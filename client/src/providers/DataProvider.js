@@ -14,7 +14,7 @@ const DataProvider = (props) => {
 
   const getJets = async()=>{
     try{
-      let res = await axios.get('api/jets')
+      let res = await axios.get('/api/jets')
       console.log(res)
       setJets(res.data)
     } catch(err){
@@ -22,10 +22,21 @@ const DataProvider = (props) => {
     }
   }
 
+  const deleteJet = async(id)=>{
+    try{
+      let res = await axios.delete(`/api/jets/${id}`)
+      let filteredJets = jets.filter(j=> j.id )
+    }catch(err){
+      alert('err in deleting')
+    }
+  }
+
+
   // create an object that will be 'global state'
   const jetProviderThing = {
     getJets,
-    jets
+    deleteJet,
+    jets,
 };
   // return the provider which will wrap my all app
   return (

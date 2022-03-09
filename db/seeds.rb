@@ -7,10 +7,10 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Jet.destroy_all
 
-Jet.create(name:'F-14', age:52, topspeed:950)
-Jet.create(name:'F-15', age:50, topspeed:825)
-Jet.create(name:'F-16', age:46, topspeed:880)
-Jet.create(name:'F-17', age:19, topspeed:925)
-Jet.create(name:'F-18', age:44, topspeed:950)
+Jet.create(name:'F-14', age:52, topspeed:1544)
+Jet.create(name:'F-15', age:50, topspeed:1875)
+Jet.create(name:'F-16', age:46, topspeed:1534)
+Jet.create(name:'F-17', age:19, topspeed:1227)
+Jet.create(name:'F-18', age:44, topspeed:1190)
 
 puts "seeded jet size: #{Jet.all.size}"
